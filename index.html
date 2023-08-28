@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" defer src="main.js"></script>
+  <title>Real Estate Site</title>
+</head>
+
+<body>
+  <!--------------------------Creating Navbar--------------------------->
+
+  <header class="sticky top-0 z-10 bg-black-light text-white">
+    <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+      <h1 class="text-xl self-start font-medium">
+        <a href="#hero" class="ml-10 md:ml-0" >Logo</a>
+      </h1>
+      <div>
+        <button id="hamburger-button" class="container mx-auto px-14 relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+          <div
+            class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
+          </div>
+        </button>
+
+        <nav class="hidden space-x-8 text-md md:block" aria-label="main">
+          <a href="#hero" class="hover:opacity-90">Home</a>
+          <a href="#service" class="hover:opacity-90">Services</a>
+          <a href="#team" class="hover:opacity-90">Find a Team</a>
+          <a href="#news" class="hover:opacity-90">News</a>
+          <a href="#footer" class="hover:opacity-90">Contact Us</a>
+        </nav>
+      </div>
+    </section>
+    <section id="mobile-menu"
+      class="justify-content-center top-68 absolute hidden w-full origin-top animate-open-menu flex-col bg-black-dark text-3xl">
+      <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+        <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
+        <a href="#service" class="w-full py-6 text-center hover:opacity-90">Services</a>
+        <a href="#team" class="w-full py-6 text-center hover:opacity-90">Find a Team</a>
+        <a href="#news" class="w-full py-6 text-center hover:opacity-90">News</a>
+        <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+      </nav>
+    </section>
+  </header>
+
+  <!-----------------------Hero Section------------------------------>
+  <main>
+    <section id="hero" class="black-grad">
+      <div class="text-white flex flex-col md:flex-row md:items-end md:gap-20 max-w-[1200px] mx-auto">
+        <!--Hero text Section-->
+        <div class="flex flex-col gap-2 pt-10 px-5 text-white md:pb-20">
+          <h1 class="font-medium text-xl md:text-5xl">
+            We Provide <br />
+            Architecture design <br />
+            and Construction
+          </h1>
+          <p class="text-gray-dark max-w-[560px]">
+            ​More than 100 building and housing projects that we have built.
+            The building owner chose us over other contractors in Jakarta,
+            because our work is different
+          </p>
+          <!--Applied custom gradient color-->
+          <button class="self-start blue-grad rounded-sm text-base mt-2 py-1.5 px-3 bg-red-500">
+            Discover More
+          </button>
+          <div class="md:flex justify-between mt-8 hidden">
+            <div class="flex flex-col">
+              <h3 class="text-xl text-white font-bold">300+</h3>
+              <p>
+                Happy <br />
+                Client
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="text-xl text-white font-bold">900+</h3>
+              <p>
+                Amazing <br />
+                Projects
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <h3 class="text-xl text-white font-bold">30+</h3>
+              <p>
+                Amazing <br />
+                Awards
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Hero Image Section-->
+        <!-- w-35 h-60 -->
+        <div>
+          <div class="flex justify-end -mt-5">
+            <picture>
+              <source media="(min-width: 765px)" srcset="/hero_building.png" />
+              <source media="(max-width: 768px)" srcset="/hero_building_small.png" />
+              <img src="hero_building_small.png" class="md:w-[500px]" alt="Small Building" />
+            </picture>
+          </div>
+
+          <section class="blue-grad-2 p-5 text-white gap-12 hidden flex-col md:flex">
+            <div class="flex justify-between gap-8">
+              <div class="text-xl font-bold">Logo</div>
+
+              <div>
+                <div class="flex items-baseline">
+                  <h2 class="text-3xl font-bold text-white">25</h2>
+                  <h2 class="text-lg font-medium ml-1 text-white">Years</h2>
+                </div>
+                <h3 class="-mt-3 text-white">Operated</h3>
+              </div>
+              <!-- Text Section -->
+              <p class="text-sm max-w-[400px]">
+                As a trusted general project that has been operating for 25
+                years, our commitment is always to prioritize our client
+                satisfaction
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------Stats Section------------------------>
+    <section class="blue-grad-2 p-5 text-white gap-4 flex flex-col md:hidden">
+      <div class="flex justify-between">
+        <div>
+          <div class="flex items-baseline">
+            <h2 class="text-3xl font-bold text-white">25</h2>
+            <h2 class="text-lg font-medium ml-1 text-white">Years</h2>
+          </div>
+          <h3 class="text-xl font-semibold -mt-3 text-white">Operated</h3>
+        </div>
+        <div class="text-xl font-bold">Logo</div>
+      </div>
+      <!-- Text Section -->
+      <p class="text-sm">
+        As a trusted general project that has been operating for 25 years, our
+        commitment is always to prioritize our client satisfaction
+      </p>
+      <div class="flex justify-between">
+        <div class="flex flex-col">
+          <h3 class="text-xl text-white font-bold">300+</h3>
+          <p>
+            Happy <br />
+            Client
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-xl text-white font-bold">900+</h3>
+          <p>
+            Amazing <br />
+            Projects
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-xl text-white font-bold">30+</h3>
+          <p>
+            Amazing <br />
+            Awards
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------- Brand Logos ------------------------>
+    <section
+      class="flex gap-12 h-[100px] md:h-[200px] items-center md:justify-between md:py-5 overflow-x-auto max-w-[1200px] mx-auto">
+      <div class="h-20 grid place-content-center">
+        <img src="brand1.png" class="min-w-[6rem] md:min-w-[8rem]" alt="Brand1" />
+      </div>
+      <div class="h-20 grid place-content-center">
+        <img src="brand2.png" class="min-w-[6rem] md:min-w-[8rem]" alt="Brand2" />
+      </div>
+      <div class="h-20 grid place-content-center">
+        <img src="brand3.png" class="min-w-[6rem] md:min-w-[8rem]" alt="Brand3" />
+      </div>
+      <div class="h-20 grid place-content-center">
+        <img src="brand4.png" class="min-w-[6rem] md:min-w-[8rem]" alt="Brand4" />
+      </div>
+      <div class="h-20 grid place-content-center">
+        <img src="brand5.png" class="min-w-[6rem] md:min-w-[8rem]" alt="Brand5" />
+      </div>
+    </section>
+
+    <!------------------------- Services Section --------------------->
+    <section id="service" class="p-5 max-w-[1200px] mx-auto">
+      <div class="flex flex-col gap-2 text-center md:flex-row md:justify-between md:items-end">
+        <h2 class="text-black-dark">Our Excellent Services</h2>
+        <p class="text-base text-gray-dark md:max-w-[400px] lg:max-w-[560px]">
+          Check out our best service you can possibly orders in building your
+          company and don't forget to ask via our email or our customer
+          service if you are interested in using our services
+        </p>
+      </div>
+
+      <!-- Services Cards -->
+      <!-- <div class="flex flex-col mt-4 gap-5 overflow-x-auto md:mt-20 md:flex-row container  items-center justify-center  border-2   "> -->
+      <div class=" items-center  mt-28 flex flex-col justify-between w-full space-y-4 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8">
+        <!-- card1 -->
+        <div class="flex flex-col gap-2 min-w-[16.625rem]">
+          <div class="overflow-hidden " >
+            <img  src="service1.png" alt="Service1" />
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-black-dark">
+            Industrial
+          </h3>
+          <p class="max-w-sm mx-auto mb-10 text-base md:max-w-xl md:text-lg text-gray-600 opacity-60 dark:opacity-100">
+            Industrial development is our main line of business. We do Factory
+            Construction, Warehouse and others testttt
+          </p>
+        </div>
+        <!-- card2 -->
+        <div class="flex flex-col gap-2 min-w-[16.25rem]">
+          <div  class="overflow-hidden ">
+            <img  src="service2.png" alt="Service2" />
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-black-dark">
+            Commercial
+          </h3>
+          <p class="max-w-sm mx-auto mb-10 text-base md:max-w-xl md:text-lg text-gray-600 opacity-60 dark:opacity-100">
+            Our experience building in the Commercial field includes
+            Showrooms, Supermalls and Office Buildings
+          </p>
+        </div>
+        <!-- card3 -->
+        <div class="flex flex-col gap-2 min-w-[16.25rem]">
+          <div  class="overflow-hidden" >
+            <img  src="service3.png" alt="Service3" />
+          </div>
+          <h3 class="text-lg md:text-xl font-semibold text-black-dark">
+            Resedential
+          </h3>
+          <p class="max-w-sm mx-auto mb-10 text-base md:max-w-xl md:text-lg text-gray-600 opacity-60 dark:opacity-100">
+            Residential development is the beginning that has shaped us to
+            this day. Our development includes Houses & Apartments
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------- Features Section ----------------------->
+    <section class="p-5 max-w-[1200px] mx-auto">
+      <div class="flex flex-col gap-2">
+        <div class="h-1 w-[90px] blue-grad"></div>
+        <div class="flex flex-col gap-2 md:flex-row md:justify-between md:items-end">
+          <h2 class="text-center md:text-left">
+            What Make Us <br />
+            Different?
+          </h2>
+          <p class="text-base text-gray-dark md:max-w-[560px]">
+            Check out our best service you can possibly orders in building
+            your company and don't forget to ask via our email or our customer
+            service if you are interested in using our services
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="flex flex-col items-center text-center mt-10 md:mt-20 md:flex-row md:justify-between">
+        <!-- card1 -->
+        <div class="flex items-center flex-col gap-2 max-w-[16.25rem] md:h-[370px]">
+          <div>
+            <img src="feature1.png" alt="Service1" />
+          </div>
+          <h3 class="text-lg mt-2 font-semibold text-black-dark">
+            Industrial
+          </h3>
+          <p class="text-base text-gray-dark mb-2">
+            Industrial development is our main line of business. We do Factory
+            Construction, Warehouse and others
+          </p>
+        </div>
+        <!-- card2 -->
+        <div class="flex items-center flex-col gap-2 max-w-[16.625rem] md:h-[370px]">
+          <div>
+            <img src="feature2.png" alt="Service2" />
+          </div>
+          <h3 class="text-lg mt-2 font-semibold text-black-dark">
+            Commercial
+          </h3>
+          <p class="text-base text-gray-dark mb-2">
+            Our experience building in the Commercial field includes
+            Showrooms, Supermalls and Office Buildings
+          </p>
+        </div>
+        <!-- card3 -->
+        <div class="flex items-center flex-col gap-2 max-w-[16.625rem] md:h-[370px]">
+          <div>
+            <img src="feature3.png" alt="Service3" />
+          </div>
+          <h3 class="text-lg mt-2 font-semibold text-black-dark">On Time</h3>
+          <p class="text-base text-gray-dark mb-2">
+            We prioritize the quality of our work and finish it on time
+          </p>
+        </div>
+        <!-- card4 -->
+        <div class="flex items-center flex-col gap-2 max-w-[16.625rem] md:h-[370px]">
+          <div>
+            <img src="feature4.png" alt="Service3" />
+          </div>
+          <h3 class="text-lg mt-2 font-semibold text-black-dark">
+            Resedential
+          </h3>
+          <p class="text-base text-gray-dark">
+            Residential development is the beginning that has shaped us to
+            this day. Our development includes Houses & Apartments
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------- Team Section --------------------------->
+    <section id="team" class="p-5 max-w-[1200px] mx-auto flex flex-col lg:flex-row">
+      <div
+        class="bg-[url('team-bg.png')] flex justify-center items-end bg-no-repeat bg-cover h-[340px] mb-40 lg:flex-1 lg:mr-40 lg:flex-col lg:justify-center lg:h-[500px]">
+        <div
+          class="black-grad rounded-md w-[250px] flex flex-col items-center gap-2 p-5 relative top-24 lg:top-0 lg:-right-24">
+          <div><img src="team-avatar.png" alt="Avatar" /></div>
+          <h3 class="text-lg font-semibold text-white">Samantha Mitchell</h3>
+          <p class="text-base text-white  max-w-xs text-center">
+            Bringing over two decades of expertise in the realm of architecture, with a track record encompassing projects of considerable scale, even exceeding the 100 mark.
+          </p>
+        </div>
+      </div>
+
+      <!-- All Team Section -->
+      <div class="flex flex-col gap-2 md:flex-1 md:justify-center">
+        <h2 class="text-center md:text-left">
+          Meet and talk with <br />
+          our best architecture
+        </h2>
+        <p class="text-gray max-w-xs md:max-w-xl mx-auto ">
+          All our teams are professional and competent in their fields and
+          will help you realize your dream building with the excellent result.
+        </p>
+        <div class="flex justify-between mt-2">
+          <button class="blue-btn">See all team</button>
+          <button class="flex items-center gap-4">
+            How it works <img src="arrow-icon.svg" alt="Arraow Icon" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------- Story Section ------------------------------>
+    <section class="p-5 flex flex-col gap-4 md:flex-row-reverse max-w-[1200px] mx-auto">
+      <img src="home2.jpg" alt="Story Image" class="w-full shadow-md max-w-[570px] flex-1 border-8 border-white" />
+      <div class="flex flex-col gap-4 flex-1">
+        <h2>Our Story Who we are</h2>
+        <p class="text-gray">
+          Founded in the year 1992, ABC Company Ltd. functions as a versatile General Contracting firm, leaving its mark
+          across various regions in Indonesia. Our beginnings were rooted in spearheading construction projects within
+          the realm of commercial real estate in Surabaya. Evolving over time, we stand today as a trusted...
+        </p>
+        <button class="blue-btn self-start">See More</button>
+      </div>
+    </section>
+
+    <!-------------------------- News Section -------------------------->
+    <section id="news" class="p-5 max-w-[1200px] mx-auto">
+      <h2 class="text-center md:text-start">News & Update</h2>
+      <div class="items-center  mt-28 flex flex-col justify-between w-full space-y-4 text-2xl text-white uppercase md:flex-row md:space-y-0 md:space-x-8 ">
+        <!-- card1 -->
+        <div class="flex flex-col min-w-[250px]">
+          <div class="scale-y-90">
+            <img class="shadow-md " src="chicago.jpg" alt="Service1" />
+          </div>
+          <div class="flex align-baseline">
+            <div>
+              <p class="font-semibold text-2xl leading-none">12</p>
+              <p class="text-base text-center">June</p>
+            </div>
+            <h4 class="font-semibold text-md md:text-lg">
+              Elements of Content in Epoxy Paint
+            </h4>
+          </div>
+          <p class="text-gray-2">
+            Epoxy paint and epoxy floor contractor. Have you heard the two
+            terms? And what does that have to do with the construction of
+            existing buildings? Epoxy itself is included in the type o f
+            resin... <span class="text-blue-dark"> Read more</span>
+          </p>
+        </div>
+        <!-- card2 -->
+        <div class="flex flex-col min-w-[250px]">
+          <div class="scale-y-95" >
+            <img class="shadow-md " src="california.jpg" alt="Service1" />
+          </div>
+          <div class="flex gap-4 align-baseline">
+            <div>
+              <p class="font-semibold text-2xl leading-none">12</p>
+              <p class="text-base text-center">June</p>
+            </div>
+            <h4 class="font-semibold text-md md:text-lg">
+              Elements of Content in Epoxy Paint
+            </h4>
+          </div>
+          <p class="text-gray-2">
+            Epoxy paint and epoxy floor contractor. Have you heard the two
+            terms? And what does that have to do with the construction of
+            existing buildings? Epoxy itself is included in the type o f
+            resin... <span class="text-blue-dark"> Read more</span>
+          </p>
+        </div>
+        <!-- card3 -->
+        <div class="flex flex-col min-w-[250px]">
+          <div class="scale-y-85">
+            <img  src="ny.jpg" alt="Service1" />
+          </div>
+          <div class="flex gap-4 align-baseline">
+            <div>
+              <p class="font-semibold text-2xl leading-none">12</p>
+              <p class="text-base text-center">June</p>
+            </div>
+            <h4 class="font-semibold text-md md:text-lg">
+              Elements of Content in Epoxy Paint
+            </h4>
+          </div>
+          <p class="text-gray-2">
+            Epoxy paint and epoxy floor contractor. Have you heard the two
+            terms? And what does that have to do with the construction of
+            existing buildings? Epoxy itself is included in the type o f
+            resin... <span class="text-blue-dark"> Read more</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------- Project Section --------------------------->
+    <section class="p-5 flex flex-col gap-8 mx-auto max-w-[1200px]">
+      <h2 class="text-center md:text-left">
+        Our collection <br />
+        best projects
+      </h2>
+      <div class="flex gap-4 container mx-auto flex-col  md:flex-row items-center justify-center  ">
+
+<div class="flex flex-row md:flex-none gap-8">
+          <picture class="">
+            <source  srcset="/bigProject1.png" />
+            <img src="project1.png" alt="Project1" />
+          </picture>
+          <picture>
+            <source  srcset="/bigProject2.png" />
+            <img src="project2.png" alt="Project2" />
+          </picture>
+</div>
+      <div class="flex flex-row md:flex-none gap-8">
+          <picture>
+            <source  srcset="/bigProject3.png" />
+            <img src="project3.png" alt="Project1" />
+          </picture>
+          <picture>
+            <source srcset="/bigProject4.png" />
+            <img src="project4.png" alt="Project1" />
+          </picture>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!------------------------ Footer Section -------------------------->
+  <footer id="footer" class="black-grad">
+    <div class="p-5 py-20 max-w-[1200px] text-white flex flex-col md:flex-row gap-[40px] md:gap-[140px] mx-auto">
+      <div class="flex flex-col gap-4 max-w-[550px]">
+        <h2 class="text-white">Logo</h2>
+        <p class="text-white">
+          is a general contractor company based in Jakarta. More than 25 years
+          of experience in building and carving out Indonesia's development.
+        </p>
+        <div class="flex mt-4 gap-2">
+          <img src="twitter-logo.svg" alt="Twitter Logo" />
+          <img src="ig-logo.svg" alt="Instagram Logo" />
+          <img src="google-logo.svg" alt="Google Logo" />
+          <img src="linkedin-logo.svg" alt="Linkedin Logo" />
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <div class="flex flex-col">
+          <h4 class="font-semibold text-lg">Company</h4>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-8">
+            About
+          </p>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-4">
+            How It Works
+          </p>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-4">
+            Term
+          </p>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-4">
+            Privacy Policy
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="font-semibold text-lg">More</h4>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-8">
+            Documentation
+          </p>
+          <p class="text-md hover:border-b-2 cursor-pointer border-b-2 border-transparent hover:border-white mt-4">
+            2023 copyright &copy; created by youssef elharouch
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
